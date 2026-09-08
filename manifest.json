@@ -1,0 +1,13 @@
+{
+  "name": "TabBin — Save tabs, free RAM, browse later.",
+  "description": "Save your current tab as a URL, close it to reduce memory usage, and restore it whenever you need it.",
+  "version": "1.0.2",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "tab-bin-icon.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
