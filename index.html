@@ -3,17 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TabsBin</title>
+  <title>TabBin</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="leads-tracker__section">
+    <header class="leads-tracker__header">
+      <img src="tab-bin-icon.png" alt="" class="leads-tracker__logo">
+      <div>
+        <h1 class="leads-tracker__title">TabBin</h1>
+        <p class="leads-tracker__subtitle">Save tabs, free RAM, browse later.</p>
+      </div>
+    </header>
+
     <div class="container">
-      <input type="text" id="lead-input-el" class="leads-tracker__input" placeholder="Enter URL">
-      <button id="save-lead-btn" class="leads-tracker__button">Save Lead</button>
-      <button id="save-tab" class="leads-tracker__button">Save Tab</button>
-      <button id="delete-btn" class="leads-tracker__button">Delete All</button>
+      <div class="leads-tracker__input-row">
+        <input type="text" id="lead-input-el" class="leads-tracker__input" placeholder="Paste a URL…">
+        <button id="save-lead-btn" class="leads-tracker__button leads-tracker__button--icon" title="Save URL" aria-label="Save URL">+</button>
+      </div>
+
+      <div class="leads-tracker__actions">
+        <button id="save-tab" class="leads-tracker__button leads-tracker__button--primary">Save current tab</button>
+        <button id="delete-btn" class="leads-tracker__button leads-tracker__button--ghost" title="Double-click to delete all saved links">Delete all</button>
+      </div>
+
       <ul id="leads-list" class="leads-tracker__list"></ul>
+      <p id="empty-state" class="leads-tracker__empty">No saved tabs yet — save one above.</p>
     </div>
   </div>
   <script src="script.js"></script>
