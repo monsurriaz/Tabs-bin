@@ -4,11 +4,14 @@ Save tabs, free RAM, browse later.
 
 TabBin is a simple Chrome extension that lets you save the current tab (or any URL) as a link, close the tab to free up memory, and come back to it later from the extension popup.
 
+![TabBin popup screenshot](screenshot.png)
+
 ## Features
 
-- **Save Tab** — saves the active tab's URL and lets you close the tab to reduce memory usage.
-- **Save Lead** — manually save any URL by typing/pasting it into the input field.
-- **Delete All** — double-click to clear all saved links.
+- **Save current tab** — saves the active tab's URL so you can safely close the tab and reclaim memory.
+- **Paste a URL** — manually save any link by pasting it into the input and clicking **+** (or pressing Enter).
+- Each saved link shows its favicon and can be removed individually with the **×** button.
+- **Delete all** — double-click to clear every saved link at once.
 - Saved links persist locally using `localStorage`, so they're still there after closing and reopening the browser.
 
 ## Installation (load as an unpacked/custom extension)
@@ -27,9 +30,9 @@ To update after making changes, go back to `chrome://extensions` and click the r
 ## Usage
 
 1. Click the TabBin icon in the toolbar to open the popup.
-2. Click **Save Tab** to save the current tab's URL, or type a URL into the input and click **Save Lead** (or press Enter).
+2. Click **Save current tab** to save the active tab's URL, or paste a URL into the input and click **+** (or press Enter).
 3. Click any saved link to open it in a new tab.
-4. Double-click **Delete All** to clear all saved links.
+4. Click the **×** next to a link to remove just that one, or double-click **Delete all** to clear everything.
 
 ## Project structure
 
@@ -39,7 +42,8 @@ To update after making changes, go back to `chrome://extensions` and click the r
 ├── index.html         # Popup UI
 ├── style.css          # Popup styles
 ├── script.js          # Save/restore/delete logic
-└── tab-bin-icon.png   # Extension icon
+├── tab-bin-icon.png   # Extension icon
+└── screenshot.png     # Popup screenshot used in this README
 ```
 
 ## Tech
